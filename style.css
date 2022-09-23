@@ -13,21 +13,10 @@ body {
 #heading {
     background-color: rgb(163, 17, 17);
     color: whitesmoke;
-    display: flex;
-    width: 100%;
-}
-
-.headline {
-    padding: 20px 0 20px 50px;
-}
-
-.headline-subtext {
-    padding: 1em 20px 0 20px;
 }
 
 #icon {
     height: 80px;
-    margin: 1.2em 0 0 1.3em;
 }
 
 @media screen and (max-width: 606px) {
@@ -200,19 +189,5 @@ blockquote {
 @media screen and (max-width: 453px) {
     #geography-img img {
         height: 150px;
-    }
-}
-
-footer {
-    background-color: black;
-}
-
-footer q {
-    color: red;
-}
-
-@media screen and (max-width: 500px) {
-    #buttons {
-        bottom: 100px;
     }
 }
