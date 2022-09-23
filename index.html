@@ -3,25 +3,21 @@
     <head>
         <title>Pulau Bali</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
         <link rel="icon" href="pictures/Lambang.png" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">      
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
-            <div id="heading">
-                <img id="icon" src="pictures/Lambang.png">
-                <h1 class="headline">Pulau Bali</h1>
-                <p class="headline-subtext"><em>aka. Pulau Dewata, Pulau Seribu Pura</em></p>
+            <div id="heading" class="navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Lambang Pulau Bali" id="icon" src="pictures/Lambang.png" class="d-inline-block align-text-top">
+                        <h1 class="headline">Pulau Bali</h1>          
+                    </a>
+                    <p class="headline-subtext"><em>aka. Pulau Dewata, Pulau Seribu Pura</em></p>
+                </div>
             </div>
-            <nav id="information">
-                <button id="information-close" onclick="informationClose()">Tutup Tab</button>
-                <ul>
-                    <li><a href="#description" onclick="informationClose()">Deskripsi</a></li>
-                    <li><a href="#geography" onclick="informationClose()">Geografi</a></li>
-                    <li><a href="#history" onclick="informationClose()">Sejarah</a></li>
-                    <li><a href="#highlight-spots" onclick="informationClose()">Lokasi Sorotan</a></li>
-                </ul>
-            </nav>
         </header>
         <main>
             <div id="content">
@@ -122,11 +118,11 @@
                             <figcaption>Salah satu sisi di Nusa Penida</figcaption>
                         </figure>
                         <p>Nusa Penida. Pulau kecil yang diakses lewat <em>boat</em>. Dekat pulau ini juga ada Nusa Ceningan dan Nusa Lembongan, tapi saya pribadi belum pernah kesana. Jujur saja, pulau kecil ini sangat indah, tapi saat saya dan rombongan keluarga kesana, suasana-nya tegang, apalagi saat pulang dari pulau itu. Jika anda memiliki kondisi <em>anxiety</em> atau <dfn title="Ketakutan yang kuat terhadap laut"><a href="https://id.wikipedia.org/wiki/Thalassofobia">thalassophobia</a></dfn>, tidak disarankan untuk kesini.</p>
-                        <img class="landscape-pic" src="pictures/Nusa_Penida_2.jpg">
-                        <img class="portrait-pic" src="pictures/Nusa_Penida_3.jpg">
-                        <img class="landscape-pic" src="pictures/Nusa_Penida_4.jpg">
+                        <img alt="Foto lanskap dengan seorang guide didalamnya" class="landscape-pic" src="pictures/Nusa_Penida_2.jpg">
+                        <img alt="Foto horizontal yang diambil diatas bukit saat saya ke salah satu pura di Nusa Penida" class="portrait-pic" src="pictures/Nusa_Penida_3.jpg">
+                        <img alt="Foto lanskap yang diambil di tempat sama dengan foto sebelumnya, tapi dengan angle lain" class="landscape-pic" src="pictures/Nusa_Penida_4.jpg">
                         <p>Saat saya pertama kali kesini waktu akhir 2019, saya terpesona dengan keindahan pulau ini. Mungkin beberapa tanaman liar kering (karena disana sama sekali tidak ada sungai sama sekali, dan curah hujan sangat sedikit waktu itu), tapi pemandangan itulah yang saya sukai. Kuning dengan sedikit hijau, juga dengan latar belakang laut, membuatnya sangat indah.</p>
-                        <p>Informasi tambahan dari <a href="https://id.wikipedia.org/wiki/Nusa_Penida">Wikipedia</a>, <blockquote>Nusa Penida adalah sebuah pulau (=nusa) bagian dari negara Republik Indonesia yang terletak di sebelah tenggara Bali yang dipisahkan oleh Selat Badung. Di dekat pulau ini terdapat juga pulau-pulau kecil lainnya yaitu Nusa Ceningan dan Nusa Lembongan. Perairan pulau Nusa Penida terkenal dengan kawasan selamnya di antaranya terdapat di Crystal Bay, Manta Point, Batu Meling, Batu Lumbung, Batu Abah, Toyapakeh dan Malibu Point. </blockquote></p>
+                        <p>Informasi tambahan dari <a href="https://id.wikipedia.org/wiki/Nusa_Penida">Wikipedia</a>, <blockquote>Nusa Penida adalah sebuah pulau (=nusa) bagian dari negara Republik Indonesia yang terletak di sebelah tenggara Bali yang dipisahkan oleh Selat Badung. Di dekat pulau ini terdapat juga pulau-pulau kecil lainnya yaitu Nusa Ceningan dan Nusa Lembongan. Perairan pulau Nusa Penida terkenal dengan kawasan selamnya di antaranya terdapat di Crystal Bay, Manta Point, Batu Meling, Batu Lumbung, Batu Abah, Toyapakeh dan Malibu Point.</blockquote></p>
                     </section>
                     <section>
                         <h3>Pantai Yeh Gangga, Tabanan</h3>
@@ -150,33 +146,23 @@
                 </article>
             </div>
         </main>
-        <div id="buttons">
-            <button id="identity-open" onclick="identityOpen()">Tab Identitas</button>
-            <button id="information-open" onclick="informationOpen()">Tab Navigasi</button>
+        <div id="nav" class="dropup-center dropup">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#description">Deskripsi</a></li>
+                <li><a class="dropdown-item" href="#geography">Geografi</a></li>
+                <li><a class="dropdown-item" href="#history">Sejarah</a></li>
+                <li><a class="dropdown-item" href="#highlight-spots">Lokasi Sorotan</a></li>
+                <li><a class="dropdown-item" href="https://thethirdswan.github.io">Website Inti</a></li>
+            </ul>
         </div>
-        <aside id="identity">
-            <button id="identity-close" onclick="identityClose()">Tutup Tab</button><br>
-            <sub>Website ini dibuat oleh:</sub>
-            <figure>
-                <img src="pictures/Arya_Suwandika.jpg">
-                <figcaption><h2><a href="https://www.dicoding.com/users/aryaswan17">Arya Suwandika</a></h2></figcaption>
-                <q>A wannabe Professional Website Developer.</q><br>
-                <sup>Dengan cinta, dan kesengsaraan beberapa jam <br>hanya karena rencana tidak berjalan sesuai harapan</sup>
-            </figure>
-            <p>Username: aryaswan17</p>
-            <p>Email: <a href="mailto:aryaswan17@gmail.com">aryaswan17@gmail.com</a></p>
-            <em><p>Update 7 Juli 2021</p></em>
-            <figure>
-                <img src="pictures/Lulus.jpg" style="height: 400px;">
-                <figcaption><a href="https://www.instagram.com/stories/highlights/17892453782294196/">Story di Instagram</a></figcaption>
-            </figure>
-            <p>Saya lulus :D</p>
-            <em><p>Baru saja datang dari website saya yang lain? <a target="blank_" href="https://aryaswan17.github.io/">Kembali lagi.</a></p></em>
-        </aside>
         <footer>
-            <p>Website ini dibuat untuk "Submission Proyek Halaman Website" di <a href="https://www.dicoding.com">Dicoding</a>.</p>
             <p style="text-align: center; font-size: larger;"><q>Stay Determined.</q></p>
         </footer>
-        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>       
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
     </body>
 </html>
